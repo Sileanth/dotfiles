@@ -9,3 +9,11 @@ end
 # starship prompt
 starship init fish | source
 
+
+
+# aliases
+alias lg="lazygit"
+
+alias ll="lsd -al"
+alias ls="lsd"
+
