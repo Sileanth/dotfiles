@@ -16,6 +16,11 @@ function zellt
 end
 
 
+function zedit
+  /bin/bash ~/dotfiles/bash-helpers/zell-edit-floating.sh $argv
+end
+
+
 # aliases
 alias lg="lazygit"
 alias config="zellij a config"
