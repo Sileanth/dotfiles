@@ -1,0 +1,36 @@
+{
+    "height": 20, // Waybar height (to be removed for auto height)
+    //"spacing": 4, // Gaps between modules (4px)
+    //"modules-left": ["sway/workspaces", "custom/spotify", "custom/battery_management"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": [ "pulseaudio",  "custom/poweroff"],
+    "clock": {
+        "format": "{:%a %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d.%m.%Y}"
+    },
+    "pulseaudio": {
+        "format": "{volume}%  ",
+        "format-muted": "--- ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "on-click": "pactl set-sink-mute 0 toggle",
+        "on-click-right": "pypr toggle volume",
+        "tooltip": false
+    },
+    "custom/spotify": {
+        "exec": "spotifyctl -q status --format '  %artist% : %title%' --max-title-length 20 --max-artist-length 15",
+        "on-click": "spotifyctl -q playpause",
+        "on-double-click": "spotifyctl -q next",
+        "on-double-click-right": "spotifyctl -q previous",
+        "interval": 1
+    },
+    "custom/poweroff": {
+        "format": "",
+        "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh",
+        "tooltip": false
+    },
+   },
+}
+

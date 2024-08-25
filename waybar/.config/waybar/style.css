@@ -1,0 +1,131 @@
+@define-color  Bg-color #2D353B;
+@define-color  Bg2-color #343F44;
+@define-color  Bg3-color #3D484D;
+
+@define-color  Bg-green #425047;
+@define-color  Bg-blue #3A515D;
+@define-color  Bg-yellow #4D4C43;
+@define-color  Bg-red #543A48;
+
+@define-color  Fg-color #D3C6AA;
+@define-color  Fg2-color #475258;
+
+@define-color  Gray #9DA9A0;
+@define-color  Gray2 #859289;
+
+@define-color  Border-color #475258;
+
+@define-color  Orange #E69875;
+@define-color  Blue #7FBBB3;
+@define-color  Green #A7C080;
+@define-color  Pink #D699B6;
+@define-color  Red #E67E80;
+
+* {
+    font-family: "Anonymous Pro", "Symbols Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+tooltip {
+  background-color: @Bg-color;
+  color: @Fg-color;
+  border-radius: 10px;
+  padding: 5 5px;
+}
+
+window#waybar {
+    background-color: @Bg-color;
+    color: @Fg-color;
+    font-family: "Anonymous Pro";
+}
+
+#custom-battery_management {
+  color: red;
+}
+
+#pulseaudio, #network, #battery, #custom-sunpaper, #bluetooth, #custom-poweroff, #backlight {
+  padding: 5 10px;
+  background-color: @Bg2-color;
+  color: @Fg-color;
+}
+
+#network {
+  border-bottom-left-radius: 13px;
+  border-left: 2px solid @Bg2-color;
+}
+
+#pulseaudio {
+  background-color: @Bg-green;
+}
+
+#pulseaudio.muted {
+    background-color: @Bg-red;
+}
+
+#clock {
+    font-size: 14px;
+    color: @Fg-color;
+}
+
+#battery.critical {
+    color: @Red;
+}
+
+#battery.warning {
+    color: @Orange;
+}
+
+#battery.charging, #battery.plugged {
+    background-color: @Bg-green;
+}
+
+#custom-spotify {
+    padding: 0 20px;
+    color: @Gray2;
+}
+
+#custom-poweroff {
+  color: @Green;
+}
+
+#bluetooth.disabled, #bluetooth.off {
+  color: @Fg2-color;
+}
+
+#bluetooth.connected {
+  background-color: @Bg-blue;
+  color: @Blue;
+}
+
+#workspaces button:last-child {
+  border-bottom-right-radius: 13px;
+  border-right: 2px solid @Bg2-color;
+}
+
+
+#workspaces button {
+  min-width: 0;
+  padding: 0 7px;
+  background-color: transparent;
+  background-color: @Bg2-color;
+  border-radius: 0px;
+  color: @Gray;
+}
+
+#workspaces button.active {
+  padding: 0 7px;
+  background-color: @Bg3-color;
+  border-color: @Bg3-color;
+}
+#workspaces button.focused {
+  padding: 0 7px;
+  background-color: @Bg3-color;
+  border-color: @Bg3-color;
+}
+
+#workspaces button:hover {
+  padding: 0 7px;
+  background: @Bg-green;
+}
+
