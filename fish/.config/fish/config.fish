@@ -41,3 +41,8 @@ alias ls="lsd"
 # This section can be safely removed at any time if needed.
 test -r '/home/sileanth/.opam/opam-init/init.fish' && source '/home/sileanth/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
 # END opam configuration
+
+
+# BEGIN ghcup configuration
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+# END ghcup configuration
