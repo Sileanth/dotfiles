@@ -21,6 +21,11 @@ function zedit
 end
 
 
+function zsp
+  /bin/bash ~/dotfiles/bash-helpers/zell-pick-session.sh $argv
+end
+
+
 # aliases
 alias lg="lazygit"
 alias config="zellij a config"
