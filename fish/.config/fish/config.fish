@@ -34,6 +34,8 @@ alias ll="lsd -al"
 alias ls="lsd"
 
 
+alias hex-docs=" caddy file-server --browse --listen :5051"
+
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
 #  - the correct directories to the PATH

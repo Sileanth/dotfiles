@@ -32,6 +32,11 @@ return {
 
     -- Setup language servers.
     local lspconfig = require('lspconfig')
+
+    lspconfig.gleam.setup({})
+    lspconfig.elixirls.setup {
+      cmd = { "/usr/bin/elixir-ls" },
+    }
     lspconfig.pyright.setup { on_attach = on_attach }
     lspconfig.lua_ls.setup { on_attach = on_attach }
     -- lspconfig.ccls.setup { on_attach = on_attach }
