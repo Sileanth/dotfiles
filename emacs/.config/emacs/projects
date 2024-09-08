@@ -1,0 +1,5 @@
+;;; -*- lisp-data -*-
+(("~/dotfiles/")
+ ("~/repos/ruscik/")
+ ("~/repos/szaszki/")
+ ("~/repos/l_lang/"))

@@ -1,0 +1,18 @@
+
+
+
+* A
+ass
+* D
+** D
+* C
+
+** TODO buy milk
+
+** KILL X
+
+
+* TODO sell milk
+-[]
+-[]
+-[]

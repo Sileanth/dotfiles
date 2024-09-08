@@ -1,0 +1,12 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/home/sileanth/dotfiles/emacs/.config/emacs/init.el" . 4439)
+ ("/home/sileanth/repos/ruscik/src/main.rs" . 78)
+ ("/home/sileanth/repos/szaszki/kod.c" . 110)
+ ("/home/sileanth/repos/l_lang/bin/main.ml" . 1855)
+ ("/usr/lib/ocaml/result.mli" . 2110)
+ ("/home/sileanth/dotfiles/emacs/.config/emacs/opam-user-setup.el" . 5485)
+ ("/home/sileanth/dotfiles/bash-helpers/zell-tabs.sh" . 108)
+ ("/home/sileanth/repos/l_lang/"
+  (dired-filename . "/home/sileanth/repos/l_lang/.."))
+ ("/home/sileanth/dotfiles/"
+  (dired-filename . "/home/sileanth/dotfiles/.git")))
