@@ -45,6 +45,11 @@ test -r '/home/sileanth/.opam/opam-init/init.fish' && source '/home/sileanth/.op
 # END opam configuration
 
 
+# zoxide configuration
+zoxide init fish | source
+#
+
+
 # BEGIN ghcup configuration
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 # END ghcup configuration
