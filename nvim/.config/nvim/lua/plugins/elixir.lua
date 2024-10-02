@@ -6,7 +6,7 @@ return {
     local elixirls = require("elixir.elixirls")
 
     elixir.setup {
-      nextls = {enable = true},
+      nextls = { enable = true },
       elixirls = {
         enable = false,
         settings = elixirls.settings {

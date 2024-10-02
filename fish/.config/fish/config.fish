@@ -10,6 +10,8 @@ end
 starship init fish | source
 
 
+function fish_greeting
+end
 
 function zellt
   /bin/bash ~/dotfiles/bash-helpers/zell-tabs.sh
