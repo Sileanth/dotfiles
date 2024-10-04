@@ -2,9 +2,7 @@ return {
   'neovim/nvim-lspconfig',
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
-    "lukas-reineke/lsp-format.nvim",
     "folke/neodev.nvim",
-    "williamboman/mason.nvim",
     'nanotee/sqls.nvim',
     'p00f/clangd_extensions.nvim',
   },
@@ -18,14 +16,16 @@ return {
           library.enabled = true
           library.plugins = true
         end
+        if root_dir:find("/home/sileanth/dotfiles/nvim/.config/nvim/", 1, true) == 1 then
+          library.enabled = true
+          library.plugins = true
+        end
       end,
     })
 
 
     -- formatting on save, add on attach function to each lsp
-    require("lsp-format").setup {}
     local on_attach = function(client, bufnr)
-      require("lsp-format").on_attach(client, bufnr)
     end
 
 
@@ -35,13 +35,13 @@ return {
 
     lspconfig.gleam.setup({})
     lspconfig.elixirls.setup {
+
       cmd = { "/usr/bin/elixir-ls" },
     }
     lspconfig.pyright.setup { on_attach = on_attach }
     lspconfig.lua_ls.setup { on_attach = on_attach }
     -- lspconfig.ccls.setup { on_attach = on_attach }
     lspconfig.clangd.setup { on_attach = function(client, bufnr)
-      require("lsp-format").on_attach(client, bufnr)
       require("clangd_extensions.inlay_hints").setup_autocmd()
       require("clangd_extensions.inlay_hints").set_inlay_hints()
     end }
@@ -55,8 +55,6 @@ return {
     lspconfig.sqls.setup {
       on_attach = function(client, bufnr)
         require('sqls').on_attach(client, bufnr)
-        -- formatter is broken
-        -- require("lsp-format").on_attach(client, bufnr)
       end
     }
 
@@ -69,7 +67,10 @@ return {
     vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-    vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+
+    -- trouble nvim replaced
+    -- vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+    
 
     -- Use LspAttach autocommand to only map the following keys
     -- after the language server attaches to the current buffer
@@ -96,9 +97,7 @@ return {
         vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, opts)
         vim.keymap.set({ 'n', 'v' }, '<space>a', vim.lsp.buf.code_action, opts)
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-        vim.keymap.set('n', '<space>lf', function()
-          vim.lsp.buf.format { async = true }
-        end, opts)
+        
       end,
     })
   end
