@@ -2,11 +2,11 @@
 # emacs files
 
 ./emacs/.config/emacs/custom.el
-./emacs/.config/emacs/places
-./emacs/.config/emacs/recentf
-./emacs/.config/emacs/projects
+./emacs/.config/emacs/places/
+./emacs/.config/emacs/recentf/
+./emacs/.config/emacs/projects/
 ./emacs/.config/emacs/opam-user-setup.el
-./emacs/.config/emacs/history
+./emacs/.config/emacs/history/
 ./emacs/.config/emacs/transient/
 ./emacs/.config/emacs/elpa/
 ./emacs/.config/emacs/auto-save-list/
